@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How to customize Spree front end and create a new landing page and responsive header">
+
+    <title>Spree - Custom front end</title>
+
+    <link rel="canonical" href="http://chrisestanol.github.io/jekyll-plugin/jekyll-plugin/blog/2015/07/08/spree-front-end-customisation/">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Spree - Custom front end">
+    <meta property="og:site_name" content="Spree - Custom front end">
+    <meta property="og:url" content="http://chrisestanol.github.io/jekyll-plugin/blog/2015/07/08/spree-front-end-customisation/">
+    <meta property="og:description" content="How to customize Spree front end and create a new landing page and responsive header">
+    <meta property="og:image" content="/jekyll-plugin/spree-custom.jpg">
+    <meta property="fb:admins" content="">
+    <meta property="fb:profile_id" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="article:author" content="https://www.facebook.com/christophe.estanol">
+    <meta property="article:modified_time" content="2015-07-08T07:00:00-05:00">
+    <meta property="article:published_time" content="2015-07-08T07:00:00-05:00">
+    
+
+    <!-- Twitter card property -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@chrisestanol">
+    <meta name="twitter:creator" content="@chrisestanol">
+
+    <!-- Minified Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="/jekyll-plugin/assets/app.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+      <div class="sidebar-content">
+
+        <a href="/jekyll-plugin/">
+          <div class="logo"></div>
+        </a>
+
+        <p>Hi, I’m Christophe Estanol and I’m a Ruby on Rails Developer. Learn more about me.
+
+        Have a look around and please don’t hesitate to <a href="mailto:hi@chrisestanol.com?Subject=Hello" target="_top">contact me</a> with any comments, questions, or just to say hello!
+        </p>
+        <nav class="side-nav">
+  <ul class="nav">
+    <li><a href="/jekyll-plugin/" class="">Home</a></li>
+    <li><a href="/jekyll-plugin/work" class="">Work</a></li>
+    <!-- <li><a href="/jekyll-plugin/blog" class="">Blog</a></li> -->
+    <li><a href="/jekyll-plugin/about" class="">About</a></li>
+  </ul>
+</nav>
+
+        <ul class="side-social list-inline text-center">
+          
+          <li>
+              <a href="https://twitter.com/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-twitter fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+          
+          <li>
+              <a href="https://co.linkedin.com/in/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-linkedin fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+          
+          <li>
+              <a href="https://github.com/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-github fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+<!-- Page Header -->
+<div id="page-content-wrapper">
+<!-- Post Header -->
+<header class="intro-header">
+  <div class="container-fluid">
+    <div class="toggle-menu clearfix">
+      <a href="#menu-toggle" class="pull-right" id="menu-toggle">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-bars fa-stack-1x"></i>
+        </span>
+      </a>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="header-img">
+          <img src="/jekyll-plugin/assets/spree-custom.jpg" alt="spree-custom.jpg">
+        </div>
+        <div class="post-heading">
+          <h1>Spree - Custom front end</h1>
+          
+          <h2 class="subheading">How to customize Spree front end and create a new landing page and responsive header</h2>
+          
+          <span class="meta">July 8, 2015</span>
+          <div class="pull-right">
+            <div class="share-this">
+  <a class="btn-social js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u=http://chrisestanol.github.io/jekyll-plugin/blog/2015/07/08/spree-front-end-customisation/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share</a>
+  <a class="btn-social js-social-share twitter" onclick="ga('send', 'event', 'link', 'click', 'Twitter share');" href="https://twitter.com/intent/tweet?text=Spree%20-%20Custom%20front%20end&amp;url=http://chrisestanol.github.io/jekyll-plugin/blog/2015/07/08/spree-front-end-customisation/&amp;via=chrisestanol" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
+  <a class="btn-social js-social-share google-plus" onclick="ga('send', 'event', 'link', 'click', 'Google+ share');" href="https://plus.google.com/share?url=http://chrisestanol.github.io/jekyll-plugin/blog/2015/07/08/spree-front-end-customisation/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share</a>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+          <p>In this post we&#39;ll take a look at making simple changes to the front end of Spree.
+As much as you can you should intent override Spree front end without changing the underlying view files. This will enable you to upgrade to newest version of Spree without headache. However there are situations where a direct override will be a lot easier.</p>
+
+<h3 id="customizing-spree-views">Customizing Spree views</h3>
+
+<p>Spree use <a href="https://github.com/spree/deface">Deface</a> to make change to the views while keeping future upgrade . <em>Deface is a library that allows you to customize HTML (ERB, Haml and Slim) views in a Rails application without editing the underlying view.</em></p>
+
+<p>Changing the number of column from 3 to 2 using bootstrap grid classes looks like the following:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Deface</span><span class="o">::</span><span class="no">Override</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">virtual_path</span><span class="p">:</span> <span class="s1">&#39;spree/products/show&#39;</span><span class="p">,</span>
+        <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;columns-change-4-to-6&#39;</span><span class="p">,</span>
+        <span class="ss">set_attributes</span><span class="p">:</span> <span class="s1">&#39;.col-md-4&#39;</span><span class="p">,</span>
+        <span class="ss">attributes</span><span class="p">:</span> <span class="p">{</span><span class="ss">class</span><span class="p">:</span> <span class="s1">&#39;col-md-6&#39;</span><span class="p">})</span>
+</code></pre></div>
+<p>Or removing the sidebar:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Deface</span><span class="o">::</span><span class="no">Override</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">:virtual_path</span>  <span class="o">=&gt;</span> <span class="s1">&#39;spree/products/index&#39;</span><span class="p">,</span>
+        <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;landing-sidebar&#39;</span><span class="p">,</span>
+        <span class="ss">remove</span><span class="p">:</span> <span class="s1">&#39;[data-hook=&quot;homepage_sidebar_navigation&quot;]&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="responsive-header-nav-bar">Responsive Header (nav-bar)</h3>
+
+<p>As we saw we can use deface to transform our header, we can for example:</p>
+
+<p>remove the search-bar &amp; main-navbar</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Deface</span><span class="o">::</span><span class="no">Override</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">virtual_path</span><span class="p">:</span> <span class="s1">&#39;spree/shared/_nav_bar&#39;</span><span class="p">,</span>     
+        <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;remove-search-bar&#39;</span><span class="p">,</span>      
+        <span class="ss">remove</span><span class="p">:</span> <span class="s1">&#39;#search-bar&#39;</span><span class="p">)</span>      
+
+<span class="no">Deface</span><span class="o">::</span><span class="no">Override</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">virtual_path</span><span class="p">:</span> <span class="s1">&#39;spree/shared/_main_nav_bar&#39;</span><span class="p">,</span>
+        <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;remove-main-nav&#39;</span><span class="p">,</span>        
+        <span class="ss">remove</span><span class="p">:</span> <span class="s1">&#39;#main-nav-bar&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Latest releases of Spree have included <a href="https://getbootstrap.com">Bootstrap</a> for the front end to replace the previous Skeleton framework. The idea was to make upgrades slightly easier using the very popular Bootstrap markup. Spree will benefit from Bootstrap responsive best practices and improve usability and mobile support.
+However Spree basic version doesn&#39;t collapse the nav-bar below 750px. Integrating this functionality with all the different partials and Deface seemed a bit complicated whereas creating the file and overriding it directly would save me a lot of time so I went for this option.</p>
+
+<p>I just had to create the following file</p>
+
+<p><strong><em>app/views/spree/shared/_header.html.erb</em></strong></p>
+<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;spree-header&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">&quot;header&quot;</span> <span class="na">data-hook</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;nav</span>  <span class="na">class=</span><span class="s">&quot;navbar navbar-default&quot;</span> <span class="na">role=</span><span class="s">&quot;navigation&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid&quot;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar-header&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;button&quot;</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;collapse&quot;</span> <span class="na">data-target=</span><span class="s">&quot;#bs-example-navbar-collapse-1&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Toggle navigation<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+          <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;figure</span> <span class="na">id=</span><span class="s">&quot;logo&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="n">logo</span> <span class="cp">%&gt;</span><span class="nt">&lt;/figure&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="c">&lt;!-- Collect the nav links, forms, and other content for toggling --&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;collapse navbar-collapse&quot;</span> <span class="na">id=</span><span class="s">&quot;bs-example-navbar-collapse-1&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav navbar-right&quot;</span> <span class="na">data-hook</span><span class="nt">&gt;</span>
+              <span class="c">&lt;!-- if spree_current_user &amp; spree_current_user.is_admin? --&gt;</span>
+              <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">try_spree_current_user</span><span class="o">.</span><span class="n">try</span><span class="p">(</span><span class="ss">:has_spree_role?</span><span class="p">,</span> <span class="s1">&#39;admin&#39;</span><span class="p">)</span> <span class="cp">%&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">&#39;admin-link&#39;</span> <span class="na">data-hook</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="s1">&#39;Admin&#39;</span><span class="p">,</span> <span class="n">spree</span><span class="o">.</span><span class="n">admin_path</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+              <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+              <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">spree_current_user</span> <span class="cp">%&gt;</span>
+                <span class="nt">&lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="no">Spree</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="ss">:my_account</span><span class="p">),</span> <span class="n">spree</span><span class="o">.</span><span class="n">account_path</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="no">Spree</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="ss">:logout</span><span class="p">),</span> <span class="n">spree</span><span class="o">.</span><span class="n">logout_path</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+              <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">&quot;link-to-login&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="no">Spree</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="ss">:login</span><span class="p">),</span> <span class="n">spree</span><span class="o">.</span><span class="n">login_path</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+              <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">&quot;link-to-cart&quot;</span> <span class="na">data-hook</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;noscript&gt;</span>
+                  <span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="no">Spree</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="ss">:cart</span><span class="p">),</span> <span class="s1">&#39;/cart&#39;</span> <span class="cp">%&gt;</span>
+                <span class="nt">&lt;/noscript&gt;</span>
+                <span class="ni">&amp;nbsp;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;script&gt;</span><span class="nx">Spree</span><span class="p">.</span><span class="nx">fetch_cart</span><span class="p">()</span><span class="nt">&lt;/script&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="c">&lt;!-- /.navbar-collapse --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!-- /.container --&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+
+ <span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<h3 id="custom-landing-page">Custom landing page</h3>
+
+<p>The way to do it is to create a new file <strong><em>app/views/layout/landing.html.erb</em></strong></p>
+<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="cp">&lt;!doctype html&gt;</span>
+<span class="c">&lt;!--[if lt IE 7 ]&gt; &lt;html class=&quot;ie ie6&quot; lang=&quot;</span><span class="cp">&lt;%=</span> <span class="no">I18n</span><span class="o">.</span><span class="n">locale</span> <span class="cp">%&gt;</span><span class="c">&quot;&gt; &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE 7 ]&gt;    &lt;html class=&quot;ie ie7&quot; lang=&quot;</span><span class="cp">&lt;%=</span> <span class="no">I18n</span><span class="o">.</span><span class="n">locale</span> <span class="cp">%&gt;</span><span class="c">&quot;&gt; &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE 8 ]&gt;    &lt;html class=&quot;ie ie8&quot; lang=&quot;</span><span class="cp">&lt;%=</span> <span class="no">I18n</span><span class="o">.</span><span class="n">locale</span> <span class="cp">%&gt;</span><span class="c">&quot;&gt; &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE 9 ]&gt;    &lt;html class=&quot;ie ie9&quot; lang=&quot;</span><span class="cp">&lt;%=</span> <span class="no">I18n</span><span class="o">.</span><span class="n">locale</span> <span class="cp">%&gt;</span><span class="c">&quot;&gt; &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if gt IE 9]&gt;&lt;!--&gt;</span><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">&quot;</span><span class="cp">&lt;%=</span> <span class="no">I18n</span><span class="o">.</span><span class="n">locale</span> <span class="cp">%&gt;</span><span class="s">&quot;</span><span class="nt">&gt;</span><span class="c">&lt;!--&lt;![endif]--&gt;</span>
+  <span class="nt">&lt;head</span> <span class="na">data-hook=</span><span class="s">&quot;inside_head&quot;</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">partial</span><span class="p">:</span> <span class="s1">&#39;spree/shared/head&#39;</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&quot;</span><span class="cp">&lt;%=</span> <span class="n">body_class</span> <span class="cp">%&gt;</span><span class="s">&quot;</span> <span class="na">id=</span><span class="s">&quot;</span><span class="cp">&lt;%=</span> <span class="vi">@body_id</span> <span class="o">||</span> <span class="s1">&#39;default&#39;</span> <span class="cp">%&gt;</span><span class="s">&quot;</span> <span class="na">data-hook=</span><span class="s">&quot;body&quot;</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">partial</span><span class="p">:</span> <span class="s1">&#39;spree/shared/google_analytics.js&#39;</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">partial</span><span class="p">:</span> <span class="s1">&#39;spree/shared/header&#39;</span> <span class="cp">%&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;content&quot;</span> <span class="na">data-hook</span><span class="nt">&gt;</span>
+          <span class="cp">&lt;%=</span> <span class="n">flash_messages</span> <span class="cp">%&gt;</span>
+          <span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="ss">:templates</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">partial</span><span class="p">:</span> <span class="s1">&#39;footer/footer&#39;</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div>
+<p>(I have also created a partial for a footer as Spree doesn&#39;t include it in latest releases.)</p>
+
+<p>And override the <strong>HomeController</strong> to include <code>layout &#39;landing&#39;</code>
+<strong><em>app/controllers/spree/home_controller_decorator.rb</em></strong></p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Spree</span><span class="o">::</span><span class="no">HomeController</span><span class="o">.</span><span class="n">class_eval</span> <span class="k">do</span>
+ <span class="n">layout</span> <span class="s1">&#39;landing&#39;</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>You also have to override the landing page with deface:
+<strong><em>app/overrides/landing.rb</em></strong></p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Deface</span><span class="o">::</span><span class="no">Override</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">virtual_path</span><span class="p">:</span> <span class="s1">&#39;spree/home/index&#39;</span><span class="p">,</span>
+        <span class="ss">replace</span><span class="p">:</span> <span class="s1">&#39;[data-hook=&quot;homepage_products&quot;]&#39;</span><span class="p">,</span>
+        <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;landing-products&#39;</span><span class="p">,</span>
+        <span class="ss">partial</span><span class="p">:</span> <span class="s1">&#39;home/landing&#39;</span><span class="p">,</span>
+        <span class="ss">original</span><span class="p">:</span> <span class="s1">&#39;461aae32b5912b8551fcf3a823427507f434a0cc&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>And finally create <strong><em>app/views/home/_landing.html.erb</em></strong></p>
+
+<p>In this example will use bootstrap carousel:</p>
+<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;carousel-landing&quot;</span> <span class="na">class=</span><span class="s">&quot;carousel slide&quot;</span> <span class="na">data-ride=</span><span class="s">&quot;carousel&quot;</span><span class="nt">&gt;</span>
+
+  <span class="c">&lt;!-- Indicators --&gt;</span>
+  <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">&quot;carousel-indicators&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">&quot;#carousel-landing&quot;</span> <span class="na">data-slide-to=</span><span class="s">&quot;0&quot;</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">data-target=</span><span class="s">&quot;#carousel-landing&quot;</span> <span class="na">data-slide-to=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+
+  <span class="c">&lt;!-- Wrapper for slides --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;carousel-inner&quot;</span> <span class="na">role=</span><span class="s">&quot;listbox&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item active&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-7 carousel-img&quot;</span><span class="nt">&gt;</span>
+
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-5 carousel-text&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h1&gt;</span>Lorem ipsum<span class="nt">&lt;/h1&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odit eveniet, fugiat inventore quo, exercitationem explicabo voluptas odio, tempore quibusdam dicta repellendus. Soluta corporis, maxime dicta, autem sit praesentium nulla?<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;item&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-7 carousel-img&quot;</span><span class="nt">&gt;</span>
+
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-5 carousel-text&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h1&gt;</span>Lorem ipsum<span class="nt">&lt;/h1&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem odit eveniet, fugiat inventore quo, exercitationem explicabo voluptas odio, tempore quibusdam dicta repellendus. Soluta corporis, maxime dicta, autem sit praesentium nulla?<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="c">&lt;!-- End slides --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="c">&lt;!-- End wrapper for slides --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- End carousel --&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">&quot;text-center&quot;</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/h3&gt;</span>
+    <span class="cp">&lt;%</span> <span class="k">if</span> <span class="n">params</span><span class="o">[</span><span class="ss">:keywords</span><span class="o">]</span> <span class="cp">%&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-hook=</span><span class="s">&quot;search_results&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">if</span> <span class="vi">@products</span><span class="o">.</span><span class="n">empty?</span> <span class="cp">%&gt;</span>
+          <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">&quot;search-results-title&quot;</span><span class="nt">&gt;</span><span class="cp">&lt;%=</span> <span class="no">Spree</span><span class="o">.</span><span class="n">t</span><span class="p">(</span><span class="ss">:no_products_found</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="nt">&lt;/h6&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
+          <span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">:partial</span> <span class="o">=&gt;</span> <span class="s1">&#39;spree/shared/products&#39;</span><span class="p">,</span> <span class="ss">:locals</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:products</span> <span class="o">=&gt;</span> <span class="vi">@products</span><span class="p">,</span> <span class="ss">:taxon</span> <span class="o">=&gt;</span> <span class="vi">@taxon</span> <span class="p">}</span> <span class="cp">%&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="cp">&lt;%</span> <span class="k">else</span> <span class="cp">%&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-hook=</span><span class="s">&quot;homepage_products&quot;</span><span class="nt">&gt;</span>
+        <span class="cp">&lt;%</span> <span class="n">cache</span><span class="p">(</span><span class="n">cache_key_for_products</span><span class="p">)</span> <span class="k">do</span> <span class="cp">%&gt;</span>
+          <span class="cp">&lt;%=</span> <span class="n">render</span> <span class="ss">:partial</span> <span class="o">=&gt;</span> <span class="s1">&#39;spree/shared/products&#39;</span><span class="p">,</span> <span class="ss">:locals</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">:products</span> <span class="o">=&gt;</span> <span class="vi">@products</span><span class="p">,</span> <span class="ss">:taxon</span> <span class="o">=&gt;</span> <span class="vi">@taxon</span> <span class="p">}</span> <span class="cp">%&gt;</span>
+        <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>With this simple modifications we can transform Spree front end and</p>
+
+
+          <hr>
+           
+
+<!-- Add Disqus comments. -->
+
+      <div id="disqus_thread"></div>
+
+
+<script type="text/javascript">
+  var disqus_shortname = 'chrisestanol'; // required: replace example with your forum shortname
+  var disqus_identifier = "/blog/2015/07/08/spree-front-end-customisation/";
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+    <!-- Footer -->
+<footer>
+  <p class="copyright text-muted ">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>
+    <!-- <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> - Ilustrations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">La Ché</span>
+    <span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; display: inline-block;" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"/></a></span></p> -->
+</footer>
+
+<!-- Minified Javascripts -->
+<script type="text/javascript" src="/jekyll-plugin/assets/app.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+</script>
+
+
+
+
+</div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+</body>
+
+</html>

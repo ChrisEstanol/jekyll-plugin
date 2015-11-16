@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How to integrate acts_as_taggable gem with Chosen jQuery library for autocomplete">
+
+    <title>Rails - Tagging with autocomplete</title>
+
+    <link rel="canonical" href="http://chrisestanol.github.io/jekyll-plugin/jekyll-plugin/blog/2015/09/15/acts-as-taggable-chosen-plugin/">
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Rails - Tagging with autocomplete">
+    <meta property="og:site_name" content="Rails - Tagging with autocomplete">
+    <meta property="og:url" content="http://chrisestanol.github.io/jekyll-plugin/blog/2015/09/15/acts-as-taggable-chosen-plugin/">
+    <meta property="og:description" content="How to integrate acts_as_taggable gem with Chosen jQuery library for autocomplete">
+    <meta property="og:image" content="/jekyll-plugin/tag.jpg">
+    <meta property="fb:admins" content="">
+    <meta property="fb:profile_id" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="article:author" content="https://www.facebook.com/christophe.estanol">
+    <meta property="article:modified_time" content="2015-09-15T07:00:00-05:00">
+    <meta property="article:published_time" content="2015-09-15T07:00:00-05:00">
+    
+
+    <!-- Twitter card property -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@chrisestanol">
+    <meta name="twitter:creator" content="@chrisestanol">
+
+    <!-- Minified Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="/jekyll-plugin/assets/app.css">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+      <div class="sidebar-content">
+
+        <a href="/jekyll-plugin/">
+          <div class="logo"></div>
+        </a>
+
+        <p>Hi, I’m Christophe Estanol and I’m a Ruby on Rails Developer. Learn more about me.
+
+        Have a look around and please don’t hesitate to <a href="mailto:hi@chrisestanol.com?Subject=Hello" target="_top">contact me</a> with any comments, questions, or just to say hello!
+        </p>
+        <nav class="side-nav">
+  <ul class="nav">
+    <li><a href="/jekyll-plugin/" class="">Home</a></li>
+    <li><a href="/jekyll-plugin/work" class="">Work</a></li>
+    <!-- <li><a href="/jekyll-plugin/blog" class="">Blog</a></li> -->
+    <li><a href="/jekyll-plugin/about" class="">About</a></li>
+  </ul>
+</nav>
+
+        <ul class="side-social list-inline text-center">
+          
+          <li>
+              <a href="https://twitter.com/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-twitter fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+          
+          <li>
+              <a href="https://co.linkedin.com/in/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-linkedin fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+          
+          <li>
+              <a href="https://github.com/chrisestanol">
+                  <span class="fa-stack fa-lg">
+                      <i class="fa fa-github fa-stack-1x"></i>
+                  </span>
+              </a>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+<!-- Page Header -->
+<div id="page-content-wrapper">
+<!-- Post Header -->
+<header class="intro-header">
+  <div class="container-fluid">
+    <div class="toggle-menu clearfix">
+      <a href="#menu-toggle" class="pull-right" id="menu-toggle">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-bars fa-stack-1x"></i>
+        </span>
+      </a>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="header-img">
+          <img src="/jekyll-plugin/assets/tag.jpg" alt="tag.jpg">
+        </div>
+        <div class="post-heading">
+          <h1>Rails - Tagging with autocomplete</h1>
+          
+          <h2 class="subheading">How to integrate acts_as_taggable gem with Chosen jQuery library for autocomplete</h2>
+          
+          <span class="meta">September 15, 2015</span>
+          <div class="pull-right">
+            <div class="share-this">
+  <a class="btn-social js-social-share facebook" onclick="ga('send', 'event', 'link', 'click', 'Facebook share');" href="https://www.facebook.com/sharer/sharer.php?u=http://chrisestanol.github.io/jekyll-plugin/blog/2015/09/15/acts-as-taggable-chosen-plugin/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> Share</a>
+  <a class="btn-social js-social-share twitter" onclick="ga('send', 'event', 'link', 'click', 'Twitter share');" href="https://twitter.com/intent/tweet?text=Rails%20-%20Tagging%20with%20autocomplete&amp;url=http://chrisestanol.github.io/jekyll-plugin/blog/2015/09/15/acts-as-taggable-chosen-plugin/&amp;via=chrisestanol" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
+  <a class="btn-social js-social-share google-plus" onclick="ga('send', 'event', 'link', 'click', 'Google+ share');" href="https://plus.google.com/share?url=http://chrisestanol.github.io/jekyll-plugin/blog/2015/09/15/acts-as-taggable-chosen-plugin/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Share</a>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+          <p>For a project I was recently working on I had to set up a simple tagging system along with autocompletion. The idea was to guide the user towards a pre-defined list of tags that could be easily filtered. Amongst many options I opted for a great gem called <a href="https://github.com/mbleigh/acts-as-taggable-on">act_as_taggable</a> and the <a href="https://github.com/harvesthq/chosen">chosen</a> jQuery library.</p>
+
+<p>For this example will be creating a simple application that manages products, this could be the base for a store for example. You can find this <a href="https://github.com/ChrisEstanol/tagging_autocomplete">example</a> in my github.</p>
+
+<h3 id="let-39-s-start-by-creating-our-new-application">Let&#39;s start by creating our new application</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rails new tagging_autocomplete -T
+</code></pre></div>
+<p><strong>-T</strong> will omit all the test framework.</p>
+
+<p>Then let&#39;s add our gems</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="s1">&#39;bootstrap-sass&#39;</span>
+<span class="n">gem</span> <span class="s1">&#39;acts-as-taggable-on&#39;</span>
+</code></pre></div>
+<p>One way to add external JQuery plugins to your Rails app is to use <a href="https://rails-assets.org/">Rails Assets</a>. <em>It automatically converts the packaged components into gems that are easily droppable into your asset pipeline and stay up to date</em>. I came across Rails assets in this <a href="https://gorails.com/episodes/rails-assets">Go Rails</a> episode an I would recommend to use it every time you need to include external JS libraries into your rails application.</p>
+
+<p>Beside adding in your Gemfile</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">&#39;https://rails-assets.org&#39;</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s1">&#39;rails-assets-chosen&#39;</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>you also need to:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Include following in application.js:
+//= require chosen
+Include following in application.css:
+*= require chosen
+</code></pre></div>
+<p>And run <code>bundle install</code>.</p>
+
+<p>Next we&#39;ll need to create our CRUD to manage products and tags</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rails g scaffold Product name:string description:text
+rails g scaffold Tag name:string
+</code></pre></div>
+<p>To create a leaner Scaffold without helpers, test, or assets you can:</p>
+
+<ul>
+<li>add <code>--no-helper --no-assets --no-controller-specs --no-view-specs --no-test-framework</code> after your scaffold command</li>
+<li>or include in <strong>config/application.rb</strong></li>
+</ul>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">config</span><span class="o">.</span><span class="n">generators</span> <span class="k">do</span> <span class="o">|</span><span class="n">g</span><span class="o">|</span>
+  <span class="n">g</span><span class="o">.</span><span class="n">assets</span>            <span class="kp">false</span>
+  <span class="n">g</span><span class="o">.</span><span class="n">helper</span>            <span class="kp">false</span>
+  <span class="n">g</span><span class="o">.</span><span class="n">test_framework</span>    <span class="kp">nil</span>
+  <span class="n">g</span><span class="o">.</span><span class="n">jbuilder</span>          <span class="kp">false</span>
+<span class="k">end</span>
+</code></pre></div>
+<h3 id="set-up-act_as_taggable-gem">Set up act_as_taggable gem</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rake acts_as_taggable_on_engine:install:migrations
+</code></pre></div>
+<p>Review the generated migrations, look for the <code>ActsAsTaggableOnMigration</code> and remove</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">create_table</span> <span class="ss">:tags</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+  <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:name</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>As we already have created this table.</p>
+
+<p>then run the migration :</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rake db:migrate
+</code></pre></div>
+<p>Now we need to change in our <strong>app/controllers/product_controller.rb</strong></p>
+
+<p>The index action:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">index</span>
+  <span class="k">if</span> <span class="n">params</span><span class="o">[</span><span class="ss">:tag</span><span class="o">]</span>
+    <span class="vi">@products</span> <span class="o">=</span> <span class="no">Product</span><span class="o">.</span><span class="n">tagged_with</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:tag</span><span class="o">]</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="vi">@products</span> <span class="o">=</span> <span class="no">Product</span><span class="o">.</span><span class="n">all</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>As well as the product_params:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">product_params</span>
+  <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:product</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:description</span><span class="p">,</span> <span class="ss">:tag_list</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>In our <strong>app/models/product.rb</strong> we have to include</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">acts_as_taggable</span>
+</code></pre></div>
+<p>And in <strong>app/views/products/_form.html.erb</strong> add the tag_list field:</p>
+<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="cp">&lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:tag_list</span><span class="p">,</span> <span class="s1">&#39;Tags (separated with comas)&#39;</span> <span class="cp">%&gt;</span>
+<span class="cp">&lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">text_field</span> <span class="ss">:tag_list</span><span class="p">,</span> <span class="ss">class</span><span class="p">:</span> <span class="s1">&#39;form-control&#39;</span> <span class="cp">%&gt;</span>
+</code></pre></div>
+<p>To see your tag list add <code>&lt;%= product.tag_list %&gt;</code> in <strong>/views/products/index.html.erb</strong> and <strong>/views/products/show.html.erb</strong>.
+At this stage we have built a simple tagging system but let&#39;s improve it a little with a way for the user to filter results.</p>
+
+<h3 id="filtering-results-by-tag">Filtering results by tag</h3>
+
+<p>As mentioned in this <a href="http://railscasts.com/episodes/382-tagging">Railscast</a> acts_as_taggable documentation tells us that <code>tag_list</code> returns an array.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="vi">@product</span><span class="o">.</span><span class="n">tag_list</span> <span class="c1"># =&gt; [&quot;north&quot;, &quot;east&quot;, &quot;south&quot;, &quot;west&quot;]</span>
+</code></pre></div>
+<p>So to create the filter link we just have to transform our <strong>/views/products/index.html.erb</strong> mapping each element of the array like this:</p>
+<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="cp">&lt;%=</span> <span class="n">raw</span> <span class="n">product</span><span class="o">.</span><span class="n">tag_list</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span> <span class="n">link_to</span> <span class="n">t</span><span class="p">,</span> <span class="n">tag_path</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">)</span> <span class="cp">%&gt;</span>
+</code></pre></div>
+<p>To finish off the filtering functionality we need to tweak a little our routes to show the corresponding products when clicking on a tag and not trigger the show action.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Rails</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">routes</span><span class="o">.</span><span class="n">draw</span> <span class="k">do</span>
+  <span class="n">resources</span> <span class="ss">:tags</span><span class="p">,</span> <span class="ss">except</span><span class="p">:</span> <span class="ss">:show</span>
+  <span class="n">get</span> <span class="s1">&#39;tags/:tag&#39;</span><span class="p">,</span> <span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;products#index&#39;</span>
+  <span class="n">resources</span> <span class="ss">:products</span>
+  <span class="n">root</span> <span class="s1">&#39;products#index&#39;</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>Now when you click on an individual tag you get a filtered result!</p>
+
+<h3 id="let-39-s-begin-autocompletion">Let&#39;s begin autocompletion</h3>
+
+<p>We are just a few steps away to finish with our application. For the autocompletion the Chosen library will do the heavy lifting, we just have to implement it.</p>
+
+<p>One important thing we forgot when creating our migrations for the tagging was to set up our relations within the tag model so let&#39;s fix that in <strong>app/model/tag.rb</strong>:</p>
+<div class="highlight"><pre><code class="language-Ruby" data-lang="Ruby"><span class="k">class</span> <span class="nc">Tag</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+  <span class="n">has_many</span> <span class="ss">:taggings</span>
+  <span class="n">has_many</span> <span class="ss">:tags</span><span class="p">,</span> <span class="ss">through</span><span class="p">:</span> <span class="ss">:taggings</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>We also need to permit the <code>tag_ids</code> parameters in our product_params:</p>
+<div class="highlight"><pre><code class="language-Ruby" data-lang="Ruby"><span class="k">def</span> <span class="nf">product_params</span>
+  <span class="n">params</span><span class="o">.</span><span class="n">require</span><span class="p">(</span><span class="ss">:product</span><span class="p">)</span><span class="o">.</span><span class="n">permit</span><span class="p">(</span><span class="ss">:name</span><span class="p">,</span> <span class="ss">:description</span><span class="p">,</span> <span class="ss">:tag_list</span><span class="p">,</span> <span class="ss">:tag</span><span class="p">,</span> <span class="p">{</span> <span class="ss">tag_ids</span><span class="p">:</span> <span class="o">[]</span> <span class="p">},</span> <span class="ss">:tag_ids</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>Change our <code>text_field</code> for a <code>collection_select</code> in our <strong>views/products/_form.html.erb</strong>:</p>
+<div class="highlight"><pre><code class="language-rhtml" data-lang="rhtml"><span class="cp">&lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">label</span> <span class="ss">:tag_list</span><span class="p">,</span> <span class="s2">&quot;Tags&quot;</span> <span class="cp">%&gt;</span>
+<span class="cp">&lt;%=</span> <span class="n">f</span><span class="o">.</span><span class="n">collection_select</span> <span class="ss">:tag_ids</span><span class="p">,</span> <span class="no">Tag</span><span class="o">.</span><span class="n">order</span><span class="p">(</span><span class="ss">:name</span><span class="p">),</span> <span class="ss">:id</span><span class="p">,</span> <span class="ss">:name</span><span class="p">,</span> <span class="p">{},</span> <span class="p">{</span><span class="ss">multiple</span><span class="p">:</span> <span class="kp">true</span><span class="p">}</span> <span class="cp">%&gt;</span>
+</code></pre></div>
+<p>And finally initiate chosen.js in <strong>app/views/layouts/application.html.erb</strong>. If we inspect the select attribute in the browser we&#39;ll see that rails create <code>id=&quot;product_tag_ids&quot;</code>:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js">  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;ready page:load&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#product_tag_ids&#39;</span><span class="p">).</span><span class="nx">chosen</span><span class="p">({</span>
+      <span class="nx">allow_single_deselect</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;100%&#39;</span>
+    <span class="p">})</span>
+  <span class="p">});</span>
+</code></pre></div>
+<p>That&#39;s all, we made it and we have now created a tagging system with autocompletion. The source code for this application is in my <a href="https://github.com/ChrisEstanol/tagging_autocomplete">github repository</a>.</p>
+
+
+          <hr>
+           
+
+<!-- Add Disqus comments. -->
+
+      <div id="disqus_thread"></div>
+
+
+<script type="text/javascript">
+  var disqus_shortname = 'chrisestanol'; // required: replace example with your forum shortname
+  var disqus_identifier = "/blog/2015/09/15/acts-as-taggable-chosen-plugin/";
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+    <!-- Footer -->
+<footer>
+  <p class="copyright text-muted ">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>
+    <!-- <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> - Ilustrations</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">La Ché</span>
+    <span><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0; display: inline-block;" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"/></a></span></p> -->
+</footer>
+
+<!-- Minified Javascripts -->
+<script type="text/javascript" src="/jekyll-plugin/assets/app.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+</script>
+
+
+
+
+</div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+</body>
+
+</html>
